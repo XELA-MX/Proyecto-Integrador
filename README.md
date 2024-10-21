@@ -16,3 +16,9 @@ En este avance, se ha implementado la estructura básica del simulador de draft,
 Ejecuta el siguiente comando en la terminal:
 
 > g++ main.cpp draft.cpp player.cpp doubly_linked_list.cpp -o simulador_draft
+
+## Instrucciones para ejecutar el avance de proyecto
+
+Ejecuta el siguiente comando en la terminal:
+
+> ./simulador_draft
