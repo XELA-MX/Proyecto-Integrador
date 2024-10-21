@@ -17,8 +17,17 @@ Ejecuta el siguiente comando en la terminal:
 
 > g++ main.cpp draft.cpp player.cpp doubly_linked_list.cpp -o simulador_draft
 
+
 ## Instrucciones para ejecutar el avance de proyecto
 
 Ejecuta el siguiente comando en la terminal:
 
 > ./simulador_draft
+
+
+# Descripción de las entradas del avance de proyecto
+
+**El proyecto requiere dos archivos de entrada:**
+
+`jugadores.txt` : Contiene la información de los jugadores en el formato:
+
