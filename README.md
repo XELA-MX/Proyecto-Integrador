@@ -67,4 +67,40 @@ una lista doblemente enlazada para almacenar los jugadores, lo que permite inser
 
 La implementación de Quicksort se adapta a diferentes criterios de ordenamiento (PPG, Defense Rating, Three Point Percentage), demostrando flexibilidad en la toma de decisiones algorítmicas.
 
+## SICT0303: Implementa acciones científicas
 
+
+1. Implementa mecanismos para consultar información de las estructuras correctos:
+
+Implmenté una lista doblemente ligada donde asigné de manera efectiva la consulta de datos. Esta almacena a los jugadores.
+Esto se muestra en la función SimularDraft(), donde se recorre la lista de jugadores para mostrar información específica:
+
+```
+Node *current = jugadores.getHead();
+for (int i = 0; i < 5 && current != nullptr; i++) {
+  std::cout << i + 1 << ". " << current->data.name << " (";
+  // ... (código para mostrar estadísticas)
+  std::cout << ")" << std::endl;
+  current = current->next;
+}
+```
+
+Además, la implementación del algoritmo Quicksort demuestra la capacidad de manipular y consultar la estructura de datos de manera eficiente.
+
+```
+void Draft::LeerArchivo(const std::string &nombreArchivo) {
+  std::ifstream archivo(nombreArchivo);
+  if (archivo.is_open()) {
+    std::string linea;
+    while (std::getline(archivo, linea)) {
+      // ... (código para procesar cada línea)
+      jugadores.pushBack(Player(nombre, PPG, defensa, porcentajeTres));
+    }
+    archivo.close();
+  } else {
+    std::cerr << "No se pudo abrir el archivo: " << nombreArchivo << std::endl;
+  }
+}
+```
+
+Estos ejemplos sirven para mostrar que s eimplementó de manera efectiva  mecanismos para consultar información de las estructuras y para leer archivos y cargar datos de manera correcta, cumpliendo así con los requisitos de la competencia SICT0303.
