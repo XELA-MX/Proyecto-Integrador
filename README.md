@@ -69,38 +69,8 @@ La implementación de Quicksort se adapta a diferentes criterios de ordenamiento
 
 ## SICT0303: Implementa acciones científicas
 
+Se implementaron mecanismos eficientes para consultar información de estructuras de datos complejas como una lista doblemente enlazada que almacena objetos Player. Esto se puede ver en la función `SimularDraft()`, donde se recorre la lista de jugadores para mostrar información necesaria para el programa, y en la implementación del algoritmo Quicksort, que se puede apreciar la capacidad de manipular y consultar la estructura de datos de manera eficiente.
 
-1. Implementa mecanismos para consultar información de las estructuras correctos:
+Además, el programa implementa una fucnión de lectura de archivos para cargar datos en las estructuras. La función `LeerArchivo()` maneja la apertura del archivo, lee cada línea, procesa la información y crea objetos Player que se añaden a la lista. El programa también verifica la existencia de un archivo de equipos y lo genera si no existe, aquí demuestro la capacidad de manejar tanto la lectura como la escritura de archivos.
 
-Implmenté una lista doblemente ligada donde asigné de manera efectiva la consulta de datos. Esta almacena a los jugadores.
-Esto se muestra en la función SimularDraft(), donde se recorre la lista de jugadores para mostrar información específica:
-
-```
-Node *current = jugadores.getHead();
-for (int i = 0; i < 5 && current != nullptr; i++) {
-  std::cout << i + 1 << ". " << current->data.name << " (";
-  // ... (código para mostrar estadísticas)
-  std::cout << ")" << std::endl;
-  current = current->next;
-}
-```
-
-Además, la implementación del algoritmo Quicksort demuestra la capacidad de manipular y consultar la estructura de datos de manera eficiente.
-
-```
-void Draft::LeerArchivo(const std::string &nombreArchivo) {
-  std::ifstream archivo(nombreArchivo);
-  if (archivo.is_open()) {
-    std::string linea;
-    while (std::getline(archivo, linea)) {
-      // ... (código para procesar cada línea)
-      jugadores.pushBack(Player(nombre, PPG, defensa, porcentajeTres));
-    }
-    archivo.close();
-  } else {
-    std::cerr << "No se pudo abrir el archivo: " << nombreArchivo << std::endl;
-  }
-}
-```
-
-Estos ejemplos sirven para mostrar que s eimplementó de manera efectiva  mecanismos para consultar información de las estructuras y para leer archivos y cargar datos de manera correcta, cumpliendo así con los requisitos de la competencia SICT0303.
+De esta manera demuestro la capacidad de consultar información de estructuras de datos complejas y de cargar datos desde archivos de manera eficiente y correcta, cumpliendo así con los requisitos de la competencia SICT0303.
