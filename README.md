@@ -31,3 +31,14 @@ Ejecuta el siguiente comando en la terminal:
 
 `jugadores.txt` : Contiene la información de los jugadores en el formato:
 
+> Nombre,PPG,Defense Rating,%3p
+
+### Ejemplo:
+
+> LeBron James,25.7,106.2,34.6
+> Kevin Durant,29.9,108.3,38.3
+
+`equipos_nba.txt` : Lista de equipos de la NBA (se genera automáticamente si no existe)
+
+
+
