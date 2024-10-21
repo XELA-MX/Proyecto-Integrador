@@ -1,0 +1,30 @@
+Victor Wembanyama,21.4,105.8,32.5
+Chet Holmgren,16.5,108.4,53.0
+Nikola Jokić,26.4,108.0,35.9
+Dalton Knecht,21.7,0,39.7
+Ron Holland,20.6,0,0
+Zaccharie Risacher,10.1,0,34.9
+Donovan Clingan,0,Elite,0
+Rob Dillingham,26.1,0,0
+Brandon Miller,18.8,103.4,38.3
+Scoot Henderson,16.5,110.3,32.4
+Amen Thompson,9.3,108.7,27.3
+Ausar Thompson,12.1,106.9,31.1
+Cam Whitmore,12.0,109.1,34.3
+Gradey Dick,10.8,108.4,37.4
+Jalen Hood-Schifino,11.7,107.6,33.3
+Keyonte George,14.1,110.8,32.8
+Jordan Hawkins,13.7,109.4,35.6
+Jarace Walker,11.2,105.5,34.7
+Taylor Hendricks,10.4,107.2,39.4
+Anthony Black,12.8,104.9,30.1
+Cason Wallace,11.7,105.6,34.6
+Dereck Lively II,5.2,102.8,14.3
+Kobe Bufkin,14.0,107.3,35.5
+Brice Sensabaugh,16.3,109.0,40.5
+Jett Howard,14.2,108.2,36.8
+Leonard Miller,17.3,104.6,33.9
+Bilal Coulibaly,8.8,103.7,35.7
+Noah Clowney,9.8,108.9,28.3
+Maxwell Lewis,17.1,107.1,35.4
+Jaime Jaquez Jr.,17.8,106.8,31.7
