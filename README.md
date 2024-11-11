@@ -10,7 +10,7 @@ Además, el sistema incorpora características avanzadas como:
 2. Selección aleatoria de equipos y generación de recomendaciones estratégicas.
 3. Interfaz de usuario interactiva que permite a los participantes tomar decisiones informadas durante el draft.
 4. Simulación realista del proceso de draft, incluyendo selecciones automáticas para equipos controlados por la computadora.
-5. 
+   
 Este proyecto no solo simula el  proceso de un draft de la NBA, sino que también demuestra la aplicación práctica de estructuras de datos avanzadas y algoritmos de ordenamiento en un contexto deportivo real.
 
 ## Descripción del avance 1
