@@ -1,7 +1,17 @@
 # Proyecto: Simulador de draft de la NBA
 
-Este proyecto simula un draft de la NBA, donde se seleccionan jugadores para diferentes equipos basándose en sus estadísticas.
-Utiliza una estructura de datos de lista doblemente enlazada para almacenar y manipular la información de los jugadores, y emplea el algoritmo Quicksort para ordenarlos según diferentes criterios.
+Este proyecto simula un draft de la NBA, ofreciendo una experiencia interactiva donde los usuarios pueden participar en la selección de jugadores para diferentes equipos de la liga. El sistema utiliza una estructura de datos de lista doblemente enlazada para almacenar y manipular eficientemente la información de los jugadores, permitiendo un acceso rápido y flexible a los datos en ambas direcciones.
+
+El proyecto implementa el algoritmo Quicksort para ordenar a los jugadores según diferentes criterios estadísticos, como puntos por juego (PPG), calificación defensiva y porcentaje de tiros de tres puntos. Esta implementación permite una clasificación rápida y eficiente de los jugadores, crucial para el proceso de selección durante el draft.
+
+Además, el sistema incorpora características avanzadas como:
+
+1. Lectura y escritura de archivos para manejar datos de jugadores y equipos.
+2. Selección aleatoria de equipos y generación de recomendaciones estratégicas.
+3. Interfaz de usuario interactiva que permite a los participantes tomar decisiones informadas durante el draft.
+4. Simulación realista del proceso de draft, incluyendo selecciones automáticas para equipos controlados por la computadora.
+5. 
+Este proyecto no solo simula el  proceso de un draft de la NBA, sino que también demuestra la aplicación práctica de estructuras de datos avanzadas y algoritmos de ordenamiento en un contexto deportivo real.
 
 ## Descripción del avance 1
 
