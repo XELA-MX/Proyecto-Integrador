@@ -149,6 +149,7 @@ void Draft::ImprimirOrdenLista(const std::string& nombreArchivo) {
         }
         
         file.close();
+        //std::cout << "Resultados guardados en " << nombreArchivo << std::endl;
     } else {
         std::cerr << "No se pudo abrir el archivo para escribir.\n";
     }
