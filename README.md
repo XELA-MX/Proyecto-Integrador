@@ -18,9 +18,9 @@ En este avance, se han realizado las siguientes mejoras:
 * Modificación de la función destructor para guardar los resultados en archivos de texto.
 
 ## Cambios sobre el primer avance
-[ * ] Adición de nuevas funciones: Se agregaron las funciones ImprimirOrdenLista, PreOrder e InOrder para imprimir la lista en diferentes órdenes. Esto mejora la visualización de los resultados del draft.
-[ * ] Mejora en la documentación: Se añadieron comentarios sobre la complejidad temporal de cada función, lo que facilita el análisis del rendimiento del programa.
-[ * ] Ampliación de la funcionalidad de guardado: Se modificó el destructor y la función SimularDraft para guardar los resultados en archivos de texto, permitiendo un mejor seguimiento de los resultados del draft.
+[x] Adición de nuevas funciones: Se agregaron las funciones ImprimirOrdenLista, PreOrder e InOrder para imprimir la lista en diferentes órdenes. Esto mejora la visualización de los resultados del draft.
+[x] Mejora en la documentación: Se añadieron comentarios sobre la complejidad temporal de cada función, lo que facilita el análisis del rendimiento del programa.
+[x] Ampliación de la funcionalidad de guardado: Se modificó el destructor y la función SimularDraft para guardar los resultados en archivos de texto, permitiendo un mejor seguimiento de los resultados del draft.
 
 ## Instrucciones para compilar el avance de proyecto
 
