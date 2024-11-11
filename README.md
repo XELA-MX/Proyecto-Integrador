@@ -113,7 +113,7 @@ Adicionalmente, se ha realizado un análisis de complejidad para todas las funci
 
 ### Descripción
 
-El algoritmo **Quicksort** es un método de ordenación basado en la técnica de **divide y vencerás**. Funciona seleccionando un pivote, luego particiona el arreglo en dos subarreglos (elementos menores y mayores que el pivote), y ordena recursivamente cada subarreglo. Este proceso se repite hasta que los subarreglos se reducen a tamaños manejables o ya están ordenados.
+El algoritmo **Quicksort** es un método que funciona seleccionando un pivote, luego particiona el arreglo en dos subarreglos (elementos menores y mayores que el pivote), y ordena recursivamente cada subarreglo. Este proceso se repite hasta que los subarreglos se reducen a tamaños manejables o ya están ordenados.
 
 ### Eficiencia
 
@@ -122,7 +122,7 @@ El algoritmo **Quicksort** es un método de ordenación basado en la técnica de
 
 ### Justificación
 
-Quicksort es ideal para ordenar grandes volúmenes de datos de manera rápida y efectiva. En aplicaciones como la simulación de un draft de jugadores, donde se necesitan múltiples ordenaciones según métricas como **PPG (Puntos por partido)**, **Defensive Rating**, o **Three Point Percentage**, Quicksort permite ejecutar estas ordenaciones sin pérdida de rendimiento. Su eficiencia promedio de O(n log n) garantiza un rendimiento estable, incluso con conjuntos de datos extensos, proporcionando flexibilidad y velocidad al sistema.
+Quicksort es ideal para ordenar grandes volúmenes de datos. En aplicaciones como la simulación de un draft de jugadores, donde se necesitan múltiples ordenaciones según métricas como **PPG (Puntos por partido)**, **Defensive Rating**, o **Three Point Percentage**, Quicksort permite ejecutar estas ordenaciones sin pérdida de rendimiento. Su eficiencia promedio de O(n log n) garantiza un rendimiento estable, incluso con conjuntos de datos extensos, proporcionando flexibilidad y velocidad al sistema.
 
 ---
 
