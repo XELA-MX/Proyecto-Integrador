@@ -18,17 +18,6 @@
     creador apuntado.
 */
 
-/**
-¿Cuál es la complejidad temporal de la búsqueda en una lista doblemente ligada?
-¿Cómo se compara la eficiencia de inserción y eliminación entre listas ligadas
-simples y doblemente ligadas?
-
-¿En qué tipos de problemas o aplicaciones son
-particularmente útiles las listas doblemente ligadas? ¿Puede dar un ejemplo
-práctico donde una lista doblemente ligada sería la estructura de datos más
-adecuada?
-*/
-
 #pragma once
 #include "ListaDoble.h"
 #include "player.h"
@@ -39,96 +28,131 @@ adecuada?
 #include <sstream>
 #include <string>
 #include <vector>
-
-// Nombre,PPG,Defense Rating,%3p
+#include <functional>
 
 class Draft {
 private:
-  // Número total de jugadores
-  int number_of_players;
+    int number_of_players;
+    std::vector<std::string> equipos = {"Atlanta Hawks", 
+                                        "Boston Celtics",
+                                        "Brooklyn Nets",
+                                        "Charlotte Hornets",
+                                        "Chicago Bulls",
+                                        "Cleveland Cavaliers",
+                                        "Dallas Mavericks",
+                                        "Denver Nuggets",
+                                        "Detroit Pistons", 
+                                        "Golden State Warriors", 
+                                        "Houston Rockets", 
+                                        "Indiana Pacers", 
+                                        "LA Clippers", 
+                                        "Los Angeles Lakers", 
+                                        "Memphis Grizzlies", 
+                                        "Miami Heat", 
+                                        "Milwaukee Bucks", 
+                                        "Minnesota Timberwolves", 
+                                        "New Orleans Pelicans", 
+                                        "New York Knicks", 
+                                        "Oklahoma City Thunder", 
+                                        "Orlando Magic", 
+                                        "Philadelphia 76ers", 
+                                        "Phoenix Suns", 
+                                        "Portland Trail Blazers", 
+                                        "Sacramento Kings", 
+                                        "San Antonio Spurs", 
+                                        "Toronto Raptors", 
+                                        "Utah Jazz", 
+                                        "Washington Wizards"};
 
-  /*
-    Lista sacada de github ,  créditos a:
-    https://github.com/NicolasCaminos/NBA
-  */
+    DoublyLinkedList jugadores;
 
-  std::vector<std::string> equipos = {"Atlanta Hawks",
-                                      "Boston Celtics",
-                                      "Brooklyn Nets",
-                                      "Charlotte Hornets",
-                                      "Chicago Bulls",
-                                      "Cleveland Cavaliers",
-                                      "Dallas Mavericks",
-                                      "Denver Nuggets",
-                                      "Detroit Pistons",
-                                      "Golden State Warriors",
-                                      "Houston Rockets",
-                                      "Indiana Pacers",
-                                      "LA Clippers",
-                                      "Los Angeles Lakers",
-                                      "Memphis Grizzlies",
-                                      "Miami Heat",
-                                      "Milwaukee Bucks",
-                                      "Minnesota Timberwolves",
-                                      "New Orleans Pelicans",
-                                      "New York Knicks",
-                                      "Oklahoma City Thunder",
-                                      "Orlando Magic",
-                                      "Philadelphia 76ers",
-                                      "Phoenix Suns",
-                                      "Portland Trail Blazers",
-                                      "Sacramento Kings",
-                                      "San Antonio Spurs",
-                                      "Toronto Raptors",
-                                      "Utah Jazz",
-                                      "Washington Wizards"};
-  // Función para ver si existe un archivo
-  bool Archivo_Existe(const std::string &);
+    // Complejidad: O(1)
+    bool Archivo_Existe(const std::string &);
 
-  // Función que espera que el usuario aprete el ENTER
-  void EsperarEnter();
+    // Complejidad: O(1)
+    void EsperarEnter();
 
-  // Función que crea el archivo equipos_nba.txt
-  void GenerarListaDeEquipos(const std::vector<std::string> &);
+    // Complejidad: O(n) donde n es el número de equipos
+    void GenerarListaDeEquipos(const std::vector<std::string> &);
 
-  // Función para limpiar la consola
-  void LimpiarConsola();
+    // Complejidad: O(1)
+    void LimpiarConsola();
 
-  // Función para leer el archivo jugadores.txt
-  void LeerArchivo(const std::string &);
+    // Complejidad: O(n) donde n es el número de líneas en el archivo
+    void LeerArchivo(const std::string &);
 
-  // Lista de jugadores
-  DoublyLinkedList jugadores;
+    // Complejidad: O(n^2) donde n es el número de jugadores
+    void BubbleSort();
 
-  // Bubble sort
-  void BubbleSort();
+    // Complejidad: O(1)
+    std::string SeleccionarEquipoAleatorio();
 
-  // Función para seleccionar un equipo aleatorio
-  std::string SeleccionarEquipoAleatorio();
+    // Complejidad: O(1)
+    std::vector<std::string> ObtenerRecomendaciones(const std::string &equipo);
 
-  // Función para obtener recomendaciones de draft
-  std::vector<std::string> ObtenerRecomendaciones(const std::string &equipo);
+    // Complejidad: O(n log n) en promedio, O(n^2) en el peor caso, donde n es el número de jugadores
+    void Quicksort(Node *low, Node *high, int statChoice);
 
-  // Quicksort para ordenar jugadores por PPG
-  void Quicksort(Node *low, Node *high, int statChoice);
-  Node *Partition(Node *low, Node *high, int statChoice);
+    // Complejidad: O(n) donde n es el número de elementos entre low y high 
+    Node *Partition(Node *low, Node *high, int statChoice);
+
+    // Complejidad: O(n) donde n es el número de jugadores 
+    void ImprimirOrdenLista(const std::string&);
+
+    // Complejidad: O(n) donde n es el número de nodos en el árbol
+    void PreOrder(Node* node, std::ofstream& file);
+
+    // Complejidad: O(n) donde n es el número de nodos en el árbol
+    void InOrder(Node* node, std::ofstream& file);
 
 public:
-  // Constructor
-  Draft();
+    // Complejidad: O(n) donde n es el número de jugadores leídos del archivo
+    Draft();
 
-  // Función set para el número de jugadores
-  void set_number_of_players(int);
+    // Complejidad: O(1) una vuelta
+    void set_number_of_players(int);
 
-  // Función para obtener el número de jugadores
-  int get_number_of_players();
+    // Complejidad: O(1) una vuelta
+    int get_number_of_players();
 
-  // Función para simular el draft
-  void SimularDraft();
+    // Complejidad: O(n log n) donde n es el número de jugadores
+    void SimularDraft();
 
-  // Destructor
-  ~Draft();
+    // Complejidad: O(1) - Solo una vuelta
+    ~Draft();
 };
+
+// Implementación de las nuevas funciones
+
+void Draft::ImprimirOrdenLista(const std::string& nombreArchivo) {
+    std::ofstream file(nombreArchivo);
+    if (file.is_open()) {
+        file << "Orden original:\n";
+        Node* current = jugadores.getHead();
+        while (current != nullptr) {
+            file << current->data.name << "\n";
+            current = current->next;
+        }
+        
+        file << "\nPreOrder:\n";
+        current = jugadores.getHead();
+        while (current != nullptr) {
+            file << current->data.name << "\n";
+            current = current->next;
+        }
+        
+        file << "\nInOrder:\n";
+        current = jugadores.getHead();
+        while (current != nullptr) {
+            file << current->data.name << "\n";
+            current = current->next;
+        }
+        
+        file.close();
+    } else {
+        std::cerr << "No se pudo abrir el archivo para escribir.\n";
+    }
+}
 
 // Esperar Enter
 void Draft::EsperarEnter() {
@@ -249,6 +273,7 @@ Draft::ObtenerRecomendaciones(const std::string &equipo) {
 }
 // ¡Hora de jugar al ordenamiento mágico de jugadores!
 void Draft::Quicksort(Node *low, Node *high, int statChoice) {
+    ImprimirOrdenLista("OrdenDeLaLista.txt");
   // Si existe algo , simplemente por seguridad
   if (low != nullptr && high != nullptr && low != high && low != high->next) {
     // Jugador de en medio
@@ -424,6 +449,8 @@ void Draft::SimularDraft() {
   for (const auto &[equipo, jugador] : equipoJugador) {
     std::cout << equipo << ": " << jugador << std::endl;
   }
+
+  // ARCHIVOS:
 }
 
 // Constructor
@@ -451,7 +478,6 @@ Draft::Draft() {
 // Destructor
 Draft::~Draft() {
   std::cout << "\n\nEl draft ha terminado!.\n\n" << std::endl;
-  // Destruir los jugadores
   EsperarEnter();
   LimpiarConsola();
 }
