@@ -109,10 +109,39 @@ Adicionalmente, se ha realizado un análisis de complejidad para todas las funci
 
 ## SICT0302: Toma decisiones
 
-* El algoritmo Quicksort es el mejor algoritmo para ordenar los jugadores debido a su eficiencia promedio de O(n log n) y su capacidad para ordenar "in-place", lo que es perfecto para conjuntos de datos grandes.
-* Se utiliza una lista doblemente enlazada para almacenar los jugadores, permitiendo así inserciones y eliminaciones eficientes en ambos extremos de la lista, excelente a la hora de realizar operaciones a la hora de simular el draft.
-* La implementación de Quicksort se adapta a diferentes criterios a la hora de ser llamada (PPG, Defense Rating, Three Point Percentage), demostrando flexibilidad en la toma de decisiones algorítmicas.
+## 1. Algoritmo Quicksort
 
+### Descripción
+
+El algoritmo **Quicksort** es un método de ordenación basado en la técnica de **divide y vencerás**. Funciona seleccionando un pivote, luego particiona el arreglo en dos subarreglos (elementos menores y mayores que el pivote), y ordena recursivamente cada subarreglo. Este proceso se repite hasta que los subarreglos se reducen a tamaños manejables o ya están ordenados.
+
+### Eficiencia
+
+- **Complejidad promedio**: O(n log n), lo que lo hace uno de los algoritmos más rápidos en promedio para tareas de ordenación.
+- **Ordenación "in-place"**: No requiere memoria adicional significativa, ya que reordena los elementos dentro del mismo arreglo. Esto lo convierte en una opción eficiente en términos de uso de memoria.
+
+### Justificación
+
+Quicksort es ideal para ordenar grandes volúmenes de datos de manera rápida y efectiva. En aplicaciones como la simulación de un draft de jugadores, donde se necesitan múltiples ordenaciones según métricas como **PPG (Puntos por partido)**, **Defensive Rating**, o **Three Point Percentage**, Quicksort permite ejecutar estas ordenaciones sin pérdida de rendimiento. Su eficiencia promedio de O(n log n) garantiza un rendimiento estable, incluso con conjuntos de datos extensos, proporcionando flexibilidad y velocidad al sistema.
+
+---
+
+## 2. Lista Doblemente Enlazada
+
+### Descripción
+
+Una **lista doblemente enlazada** es una estructura de datos lineal donde cada nodo contiene un puntero al nodo siguiente y al nodo anterior. Esto permite recorrer la lista en ambas direcciones (adelante y atrás), facilitando la inserción y eliminación de elementos en cualquier posición sin necesidad de mover los demás elementos.
+
+### Eficiencia
+
+- **Acceso**: Al ser una estructura secuencial, el acceso a un elemento en una lista doblemente enlazada tiene complejidad O(n).
+- **Inserción y Eliminación**: Las operaciones de inserción y eliminación en cualquier posición son rápidas, con una complejidad de O(1) en promedio, siempre y cuando se tenga un puntero al nodo en cuestión.
+
+### Justificación
+
+Una lista doblemente enlazada es particularmente útil en sistemas donde es necesario mantener un historial o mover elementos de una lista a otra, como en un sistema de draft donde jugadores pueden ser transferidos entre diferentes listas (por ejemplo, lista de jugadores activos y lista de reservas). La capacidad de mover nodos de forma eficiente, sin reasignación de memoria, permite una administración más dinámica de los jugadores dentro de la simulación.
+
+---
 
 ## SICT0303: Implementa acciones científicas
 
