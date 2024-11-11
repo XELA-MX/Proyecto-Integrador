@@ -73,12 +73,29 @@ La implementación se puede observar en las funciones `Quicksort` y `Partition` 
 
 Adicionalmente, se ha realizado un análisis de complejidad para todas las funciones del programa:
 
-* `ImprimirOrdenLista`: O(n) donde n es el número de jugadores
-* `PreOrder y InOrder`: O(n) donde n es el número de nodos en el árbol
-* `LeerArchivo`: O(n) donde n es el número de líneas en el archivo
-* `BubbleSort`: O(n^2) donde n es el número de jugadores
-* `SeleccionarEquipoAleatorio`: O(1)
-* `ObtenerRecomendaciones`: O(1)
+### Funciones Privadas
+
+* bool Archivo_Existe(const std::string &) - 	O(1) - 	Operación de tiempo constante para verificar la existencia de un archivo.
+* void EsperarEnter() -	O(1) -	Espera una entrada del usuario, operación de tiempo constante.
+* void GenerarListaDeEquipos(const std::vector<std::string> &) -	O(n)	- Itera sobre n equipos para escribirlos en un archivo.
+* void LimpiarConsola() -	O(1) -	Ejecuta un comando del sistema, considerado de tiempo constante.
+* void LeerArchivo(const std::string &) -	O(n) -	Lee n líneas del archivo, procesando cada una en tiempo constante.
+* void BubbleSort() -	O(n^2) -	Implementación típica de Bubble Sort con complejidad cuadrática.
+* std::string SeleccionarEquipoAleatorio() -	O(1)	- Selecciona un equipo aleatorio de un vector, operación de tiempo constante.
+* std::vector<std::string> ObtenerRecomendaciones(const std::string &equipo) -	O(1) -	Selecciona un número fijo de recomendaciones aleatorias.
+* void Quicksort(Node *low, Node *high, int statChoice)	O(n log n) promedio, - O(n^2) - peor caso	Implementación de Quicksort.
+* Node *Partition(Node *low, Node *high, int statChoice) -	O(n) -	Recorre n elementos entre low y high.
+* void ImprimirOrdenLista(const std::string&) -	O(n) -	Recorre la lista de jugadores tres veces.
+* void PreOrder(Node* node, std::ofstream& file) -	O(n) -	Visita cada nodo del árbol una vez.
+* void InOrder(Node* node, std::ofstream& file) -	O(n) -	Visita cada nodo del árbol una vez.
+
+### Funciones Públicas
+
+* Draft() -	O(n) -	Constructor que lee n jugadores del archivo.
+* void set_number_of_players(int) -	O(1) -	Asigna un valor, operación de tiempo constante.
+* int get_number_of_players() -	O(1) -	Devuelve un valor, operación de tiempo constante.
+* void SimularDraft() -	O(n log n) -	Dominada por la llamada a Quicksort.
+* ~Draft() -	O(1) -	Destructor con operaciones de tiempo constante.
 
 ## SICT0302: Toma decisiones
 
