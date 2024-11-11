@@ -15,7 +15,7 @@ En este avance, se ha implementado la estructura básica del simulador de draft,
 En este avance, se han realizado las siguientes mejoras:
 * Implementación de la función para imprimir la lista en orden original, preorder e inorder en un archivo de texto
 * Adición de comentarios sobre la complejidad y tiempo de ejecución de cada función
-* Modificación de la función SimularDraft y el destructor para guardar los resultados en archivos de texto****
+* Modificación de la función destructor para guardar los resultados en archivos de texto.
 
 ## Cambios sobre el primer avance
 [ * ] Adición de nuevas funciones: Se agregaron las funciones ImprimirOrdenLista, PreOrder e InOrder para imprimir la lista en diferentes órdenes. Esto mejora la visualización de los resultados del draft.
