@@ -1,0 +1,5 @@
+VÍDEO:
+https://www.youtube.com/watch?v=IYSId3AT2LU
+
+LINK DE SUBMISSION:
+https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/1457741888
